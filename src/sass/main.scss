@@ -872,11 +872,11 @@ body {
 
 @media (min-width: 768px) {
 	.nav {
-		.navbar {
-			&--mobile {
-				display: none;
-			}
+		&-mobile {
+			display: none;
+		}
 
+		.navbar {
 			&--desktop {
 				display: flex;
 			}
