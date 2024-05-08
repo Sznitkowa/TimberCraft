@@ -192,7 +192,6 @@ body {
 		}
 
 		&__box {
-			opacity: 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -206,10 +205,13 @@ body {
 			background-size: cover;
 			background-position: center;
 			z-index: 100;
-			transition: opacity 0.3s;
+			transform: translateY(-100%);
+			opacity: 0;
+			transition: transform 0.3s, opacity 0.3s;
 		}
 
 		.show-menu {
+			transform: translateY(0);
 			opacity: 1;
 		}
 
@@ -766,6 +768,12 @@ body {
 				padding: 1em 3em;
 			}
 		}
+
+		.contact-icon {
+			&--order {
+				font-size: 3.3rem;
+			}
+		}
 	}
 
 	.nav {
@@ -828,12 +836,6 @@ body {
 	.order {
 		.title-icon {
 			font-size: 3.3rem;
-		}
-
-		&__contact {
-			.contact-icon {
-				font-size: 3.3rem;
-			}
 		}
 
 		&__boxes {
@@ -941,6 +943,10 @@ body {
 	}
 
 	.contact-icon {
+		&--order {
+			font-size: 4rem;
+		}
+
 		&--footer {
 			font-size: 3.2rem;
 		}
@@ -1024,10 +1030,6 @@ body {
 
 			&-text {
 				font-size: 2rem;
-			}
-
-			.contact-icon {
-				font-size: 4rem;
 			}
 		}
 
